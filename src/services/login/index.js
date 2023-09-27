@@ -4,7 +4,7 @@
 export const login=async(formData)=>{
 
     try {
-        const response=await fetch('http://localhost:3000/api/login',{
+        const response=await fetch('https://nextjs-ecommerce-app-git-main-f4atmayilmaz209.vercel.app//api/login',{
             method:'POST',
             headers:{
                 'content-type':'application/json',
