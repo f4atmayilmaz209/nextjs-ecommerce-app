@@ -6,7 +6,7 @@ import Order from "@/models/order";
 
 
 export const dynamic="force-dynamic";
-
+ 
 export async function GET(req){
     try {
         await connectToDB()
