@@ -31,6 +31,7 @@ export const getAllAdminProducts=async()=>{
         method:'GET',
         // cache:'no-store',
        })
+       console.log("hsssssssssssssssssssssssssfffffffff")
        const data=await res.json()
        return data;
     } catch (error) {
