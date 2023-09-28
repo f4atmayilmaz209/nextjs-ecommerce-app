@@ -30,9 +30,6 @@ export const getAllAdminProducts=async()=>{
        const res=await fetch(`/api/admin/all-products`,{
         method:'GET',
         // cache:'no-store',
-        headers:{
-            Authorization:`Bearer ${Cookies.get("token")}`
-        },
        })
        const data=await res.json()
        return data;
