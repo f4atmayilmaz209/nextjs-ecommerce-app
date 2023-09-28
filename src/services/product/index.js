@@ -29,18 +29,11 @@ export const getAllAdminProducts=async()=>{
     try {
        const res=await fetch(`/api/admin/all-products`,{
         method:'GET',
-        // cache:'no-store',
-        headers:{
-            'accept':'*/*',
-            'accept-encoding':'gzip, deflate, br',
-            'accept-language':'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7'
-        }
+        cache:'no-store',
+
        })
-       console.log("hsssssssssssssssssssssssssfffffffff")
+
        const data=await res.json()
-       console.log("redww")
-       console.log(data)
-       console.log("redww")
        return data;
     } catch (error) {
         console.log(error)
