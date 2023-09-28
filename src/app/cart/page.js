@@ -7,6 +7,7 @@ import CommonCart from "@/components/CommonCart"
 import { PulseLoader } from "react-spinners"
 import { deleteFromCart } from "@/services/cart"
 import { toast } from "react-toastify";
+import Cookies from "js-cookie"
 
 export default function Cart(){
 
@@ -19,6 +20,8 @@ export default function Cart(){
         console.log("res")
         console.log(res)
         console.log("res")
+        console.log(Cookies.get('token'))
+        console.log("ooooooooo")
         if (res.success) {
             const updatedData =
             res.data && res.data.length
