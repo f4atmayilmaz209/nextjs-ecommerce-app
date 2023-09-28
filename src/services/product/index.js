@@ -33,9 +33,9 @@ export const getAllAdminProducts=async()=>{
        })
        console.log("hsssssssssssssssssssssssssfffffffff")
        const data=await res.json()
-       console.log("red")
+       console.log("redww")
        console.log(data)
-       console.log("red")
+       console.log("redww")
        return data;
     } catch (error) {
         console.log(error)
