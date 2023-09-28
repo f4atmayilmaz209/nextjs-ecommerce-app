@@ -25,6 +25,7 @@ export const getAllCartItems=async(id)=>{
     try {
         const res=await fetch(`/api/cart/all-cart-items?id=${id}`,{
             method:'GET',
+            cache:'no-store',
             headers:{
                 Authorization:`Bearer ${Cookies.get('token')}`
             },
