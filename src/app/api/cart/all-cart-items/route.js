@@ -13,10 +13,16 @@ export async function GET(req){
         if(isAuthUser){
             const {searchParams}=new URL(req.url);
             const id=searchParams.get('id')
+            console.log("id")
+            console.log(id)
+            console.log("id")
 
 
             if(!id) return NextResponse.json({success:false,message:'please login in!'})
             const extractAllCartItems=await Cart.find({userID:id}).populate('productID');
+            console.log("ext")
+            console.log(extractAllCartItems)
+            console.log("ext")
             if(extractAllCartItems){
                 return NextResponse.json({success:true,data:extractAllCartItems})
 
