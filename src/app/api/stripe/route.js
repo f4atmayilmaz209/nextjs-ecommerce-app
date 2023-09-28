@@ -16,7 +16,7 @@ export async function POST(req){
                 line_items:res,
                 mode:'payment',
                 success_url:'/checkout'+'?status=success',
-                cancel_url:'checkout'+'?status=cancel'
+                cancel_url:'/checkout'+'?status=cancel'
             })
 
             return NextResponse.json({
