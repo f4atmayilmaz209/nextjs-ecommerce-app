@@ -5,11 +5,10 @@ import Cookies from "js-cookie"
 
 export const addToCart=async(formData)=>{
     try {
-        const res=await fetch('https://nextjs-ecommerce-app-hazel.vercel.app/api/cart/add-to-cart',{
+        const res=await fetch('/api/cart/add-to-cart',{
             method:'POST',
             headers:{
                 'content-type':'application/json',
-                'accept': 'application/json',
                 Authorization:`Bearer ${Cookies.get('token')}`
             },
             body:JSON.stringify(formData),
