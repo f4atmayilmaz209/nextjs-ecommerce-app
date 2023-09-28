@@ -27,9 +27,13 @@ export const addNewProduct=async(formData)=>{
 
 export const getAllAdminProducts=async()=>{
     try {
-       const res=await fetch('api/admin/all-products',{
+       const res=await fetch('/api/admin/all-products',{
         method:"GET",
-        cache:'no-store'
+        cache:'no-store',
+        headers:{
+            'content-type':'application/json',
+            'accept': 'application/json'
+        },
        })
        const data=await res.json()
        return data;
@@ -75,9 +79,10 @@ export const productByCategory=async(id)=>{
 
 export const productById=async(id)=>{
     try {
-        const res=await fetch(`api/admin/product-by-id?id=${id}`,{
+        const res=await fetch(`/api/admin/product-by-id?id=${id}`,{
             method:'GET',
             cache:'no-store'
+            
         })
         const data=await res.json()
         return data
