@@ -33,6 +33,9 @@ export const getAllAdminProducts=async()=>{
        })
        console.log("hsssssssssssssssssssssssssfffffffff")
        const data=await res.json()
+       console.log("red")
+       console.log(data)
+       console.log("red")
        return data;
     } catch (error) {
         console.log(error)
@@ -66,6 +69,9 @@ export const productByCategory=async(id)=>{
             cache: "no-store",
         })
         const data=await res.json();
+        console.log("red")
+        console.log(data)
+        console.log("red")
         return data;
         
     } catch (error) {
