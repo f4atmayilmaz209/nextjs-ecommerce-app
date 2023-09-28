@@ -16,19 +16,29 @@ export default function Cart(){
     async function extractAllCartItems() {
         setPageLevelLoader(true)
         const res = await getAllCartItems(user?._id)
+        
         if (res.success) {
-            const updateData=res.data && res.data.length ? res.data.map(item=>({
-                ...item,
-                productID:{
+            const updatedData =
+            res.data && res.data.length
+                ? res.data.map((item) => ({
+                    ...item,
+                    productID: {
                     ...item.productID,
-                    price:item.productID.onSale==='yes' ? parseInt((
-                        item.productID.price-item.productID.price *(item.priceDrop/100)).toFixed(2)
-                    ) : item.productID.price
-                }
-            })):[]
-            setCartItems(updateData);
-            setPageLevelLoader(false)
-            localStorage.setItem('cartItems', JSON.stringify(updateData))
+                    price:
+                        item.productID.onSale === "yes"
+                        ? parseInt(
+                            (
+                                item.productID.price -
+                                item.productID.price * (item.productID.priceDrop / 100)
+                            ).toFixed(2)
+                            )
+                        : item.productID.price,
+                    },
+                }))
+                : [];
+            setCartItems(updatedData);
+            setPageLevelLoader(false);
+            localStorage.setItem("cartItems", JSON.stringify(updatedData));
         }
         console.log(res)
     }
