@@ -22,7 +22,7 @@ export async function GET(req){
             console.log("oo")
             //const extractAllCartItemsr=await Cart.find({userID:id})
             console.log("re")
-            const extractAllCartItemse=await Cart.find({productID:"64ff69d90180a44eba433b26"})
+            const extractAllCartItemse=await Cart.find({}).populate('productID')
             console.log("tyyy")
             console.log(extractAllCartItemse)
             console.log("tyyy")
