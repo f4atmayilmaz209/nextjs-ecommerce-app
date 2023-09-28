@@ -9,6 +9,7 @@ export const addToCart=async(formData)=>{
             method:"POST",
             headers:{
                 'content-type':'application/json',
+                'accept': 'application/json',
                 Authorization:`Bearer ${Cookies.get('token')}`
             },
             body:JSON.stringify(formData),
