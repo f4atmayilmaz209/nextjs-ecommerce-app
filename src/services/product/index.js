@@ -27,7 +27,7 @@ export const addNewProduct=async(formData)=>{
 
 export const getAllAdminProducts=async()=>{
     try {
-       const res=await fetch(`/api/admin/all-products`,{
+       const res=await fetch(`https://nextjs-ecommerce-nodug6xf5-f4atmayilmaz209.vercel.app/api/admin/all-products`,{
         method:'GET',
         cache:'no-store',
 
