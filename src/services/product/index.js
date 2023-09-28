@@ -29,7 +29,7 @@ export const getAllAdminProducts=async()=>{
     try {
        const res=await fetch('/api/admin/all-products',{
         method:"GET",
-        cache:'no-store',
+        // cache:'no-store',
         headers:{
             Authorization:`Bearer ${Cookies.get("token")}`
         },
