@@ -11,7 +11,9 @@ export async function GET(req){
         await connectToDB();
 
         const extractAllproducts=await Product.find({})
+        console.log("gggghghghg")
         console.log(extractAllproducts)
+        console.log("gggghghghg")
         if(extractAllproducts){
             return NextResponse.json({
                 success:true,
