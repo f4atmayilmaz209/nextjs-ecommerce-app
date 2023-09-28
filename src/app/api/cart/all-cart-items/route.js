@@ -23,7 +23,7 @@ export async function GET(req){
             const extractAllCartItemsr=await Cart.find({userID:id})
             console.log(extractAllCartItemsr)
             console.log("re")
-            const extractAllCartItems=await Cart.find({userID:id}).populate('productID');
+            const extractAllCartItems=await Cart.findOne({userID:id}).populate('productID');
             console.log("extr")
             console.log(extractAllCartItems)
             console.log("extr")
