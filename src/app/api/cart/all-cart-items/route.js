@@ -19,7 +19,7 @@ export async function GET(req){
 
 
             if(!id) return NextResponse.json({success:false,message:'please login in!'})
-            const r=await Cart.find({})
+            const r=await Cart.findById("6515a6a11a1d2e859e8111ed")
             console.log("r")
             console.log(r)
             console.log("r")
