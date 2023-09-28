@@ -31,6 +31,9 @@ export const getAllCartItems=async(id)=>{
 
         })
         const data=await res.json()
+        console.log("kk")
+        console.log(data)
+        console.log("kk")
         return data;
     } catch (error) {
         console.log(error)
