@@ -19,7 +19,11 @@ export async function GET(req){
 
 
             // if(!id) return NextResponse.json({success:false,message:'please login in!'})
+
             const extractAllCartItems=await Cart.find({userID:id}).populate('productID');
+            console.log("extr")
+            console.log(extractAllCartItems)
+            console.log("extr")
             if(extractAllCartItems){
                 return NextResponse.json({success:true,data:extractAllCartItems})
 
