@@ -4,7 +4,7 @@ import Cookies from "js-cookie"
 
 export const addNewAddress=async(formData)=>{
     try {
-        const res=await fetch('https://nextjs-ecommerce-app-hazel.vercel.app/api/address/add-new-address',{
+        const res=await fetch('api/address/add-new-address',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
