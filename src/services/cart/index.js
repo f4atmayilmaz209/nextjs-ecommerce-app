@@ -30,6 +30,7 @@ export const getAllCartItems=async(id)=>{
             headers:{
                 Authorization:`Bearer ${Cookies.get('token')}`
             },
+            next: { revalidate: 1 }
 
         })
         const data=await res.json()
