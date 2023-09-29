@@ -25,9 +25,9 @@ export default function Checkout(){
     const router=useRouter()
     const params=useSearchParams()
 
-    const stripePromise=loadStripe(`${process.env.customKey}`)
+    const stripePromise=loadStripe(`${SERVER}`)
     console.log("process.env.customKey")
-    console.log(`${process.env.customKey}`)
+    console.log(`${SERVER}`)
     console.log("process.env.customKeyyyyy")
 
     async function getAllAddress(){

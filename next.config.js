@@ -2,6 +2,9 @@
 const nextConfig = {
     reactStrictMode:true,
     swcMinify:true,
+    env: {
+      SERVER: process.env.customKey,
+    },
     async headers() {
         return [
           {
