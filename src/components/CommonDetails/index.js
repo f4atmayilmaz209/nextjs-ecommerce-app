@@ -12,6 +12,9 @@ export default function CommonDetails({item}){
     
     
     const {setShowCartModal,user,componentLevelLoader,setComponentLevelLoader}=useContext(GlobalContext)
+    console.log("item")
+    console.log(item)
+    console.log("item")
 
     async function handleAddToCart(getItem){
         setComponentLevelLoader({loading:true,id:''})
