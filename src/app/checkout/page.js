@@ -25,6 +25,8 @@ export default function Checkout(){
     const router=useRouter()
     const params=useSearchParams()
     const server = process.env.SERVER;
+    console.log(server)
+    console.log("ser")
     const stripePromise=loadStripe(`${server}`)
 
 
