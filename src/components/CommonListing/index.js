@@ -8,9 +8,7 @@ import Notification from "../Notification"
 
 export default function CommonListing({data}){
 
-    console.log("dattttt")
-    console.log(data)
-    console.log("ty")
+
     const router=useRouter()
     useEffect(()=>{
         router.refresh()
