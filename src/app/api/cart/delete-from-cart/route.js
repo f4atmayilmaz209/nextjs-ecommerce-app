@@ -13,12 +13,12 @@ export async function DELETE(req){
         if(isAuthUser){
             const {searchParams}=new URL(req.url)
             const id=searchParams.get('id')
-            if(!id){
-                return NextResponse.json({
-                    success:false,
-                    message:"Cart Item ID is required"
-                })
-            }
+            // if(!id){
+            //     return NextResponse.json({
+            //         success:false,
+            //         message:"Cart Item ID is required"
+            //     })
+            // }
             const deleteCartItem=await Cart.findByIdAndDelete(id)
             if(deleteCartItem){
                 return NextResponse.json({

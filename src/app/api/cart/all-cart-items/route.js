@@ -13,26 +13,10 @@ export async function GET(req){
         if(isAuthUser){
             const {searchParams}=new URL(req.url);
             const id=searchParams.get('id')
-            console.log("id")
-            console.log(id)
-            console.log("id")
-
-
             // if(!id) return NextResponse.json({success:false,message:'please login in!'})
-            console.log("oo")
-            //const extractAllCartItemsr=await Cart.find({userID:id})
-            console.log("re")
-            const extractAllCartItemse=await Cart.find({}).populate('productID')
-            console.log("tyyy")
-            console.log(extractAllCartItemse)
-            console.log("tyyy")
             const extractAllCartItems=await Cart.find({userID:id}).populate('productID')
-            console.log("extr")
-            console.log(extractAllCartItems)
-            console.log("extr")
             if(extractAllCartItems){
                 return NextResponse.json({success:true,data:extractAllCartItems})
-
             }
             else{
                 return NextResponse.json({

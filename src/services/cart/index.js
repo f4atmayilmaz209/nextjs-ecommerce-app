@@ -2,7 +2,7 @@
 import Cookies from "js-cookie"
 
 
-
+//fixed
 export const addToCart=async(formData)=>{
     try {
         const res=await fetch('/api/cart/add-to-cart',{
@@ -21,6 +21,7 @@ export const addToCart=async(formData)=>{
         
     }
 }
+//fixed
 export const getAllCartItems=async(id)=>{
     try {
         const res=await fetch(`/api/cart/all-cart-items?id=${id}`,{
@@ -32,9 +33,6 @@ export const getAllCartItems=async(id)=>{
 
         })
         const data=await res.json()
-        console.log("kk")
-        console.log(data)
-        console.log("kk")
         return data;
     } catch (error) {
         console.log(error)

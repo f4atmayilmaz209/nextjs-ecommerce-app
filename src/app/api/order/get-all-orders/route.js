@@ -16,6 +16,7 @@ export async function GET(req){
             const id=searchParams.get('id')
 
             const extractAllOrders=await Order.find({user:id}).populate('orderItems.product')
+            
             if(extractAllOrders){
                 return NextResponse.json({
                     success:true,
