@@ -83,7 +83,6 @@ export const productById=async(id)=>{
             
         })
         const data=await res.json()
-        console.log("ppppppppppppppp")
         return data
         
     } catch (error) {

@@ -19,7 +19,9 @@ export async function POST(req){
                 success_url:'/checkout'+'?status=success',
                 cancel_url:'/checkout'+'?status=cancel'
             })
-
+            console.log("88")
+            console.log(session.id)
+            console.log("88")
             return NextResponse.json({
                 success:true,
                 id:session.id
