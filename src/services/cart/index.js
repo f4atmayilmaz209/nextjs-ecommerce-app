@@ -5,7 +5,7 @@ import Cookies from "js-cookie"
 //fixed
 export const addToCart=async(formData)=>{
     try {
-        const res=await fetch('/api/cart/add-to-cart',{
+        const res=await fetch('https://nextjs-ecommerce-nodug6xf5-f4atmayilmaz209.vercel.app/api/cart/add-to-cart',{
             method:'POST',
             headers:{
                 'content-type':'application/json',
@@ -24,7 +24,7 @@ export const addToCart=async(formData)=>{
 //fixed
 export const getAllCartItems=async(id)=>{
     try {
-        const res=await fetch(`/api/cart/all-cart-items?id=${id}`,{
+        const res=await fetch(`https://nextjs-ecommerce-nodug6xf5-f4atmayilmaz209.vercel.app/api/cart/all-cart-items?id=${id}`,{
             method:'GET',
             cache:'no-store',
             headers:{
