@@ -27,6 +27,7 @@ export default function Checkout(){
 
     const publishableKey =process.env.customKey
     const stripePromise=loadStripe(publishableKey)
+    console.log("process.env.customKey")
     console.log(stripePromise)
 
     async function getAllAddress(){

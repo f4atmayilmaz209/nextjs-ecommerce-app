@@ -16,13 +16,7 @@ export default function Cart(){
 
     async function extractAllCartItems() {
         setPageLevelLoader(true)
-        console.log("rtt")
-        console.log(user?._id)
-        console.log("rtt")
         const res = await getAllCartItems(user?._id)
-        console.log("jjjjjjjjjj")
-        console.log(res.data)
-        console.log("jjjjjjjjjj")
         if (res.success) {
             const updatedData =
             res.data && res.data.length
