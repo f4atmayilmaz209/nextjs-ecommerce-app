@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import AuthUser from "@/middleware/AuthUser";
 
-const stripe=require('stripe')(process.env.SK_KEY_STRIPE)
+
+const sk_key_stripe=process.env.SK_KEY_STRIPE
+const stripe=require('stripe')(sk_key_stripe)
 
 export const dynamic='force-dynamic';
 

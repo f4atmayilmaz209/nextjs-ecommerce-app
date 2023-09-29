@@ -124,6 +124,9 @@ export default function Checkout(){
         const {error}=await stripe.redirectToCheckout({
             sessionId:res?.id
         })
+        console.log("err")
+        console.log(error)
+        console.log("err")
 
     }
     useEffect(()=>{

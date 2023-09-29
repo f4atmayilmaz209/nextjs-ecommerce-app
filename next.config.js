@@ -4,6 +4,7 @@ const nextConfig = {
     swcMinify:true,
     env: {
       SERVER: process.env.customKey,
+      SK_KEY_STRIPE: process.env.SK_KEY_STRIPE,
     },
     async headers() {
         return [
