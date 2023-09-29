@@ -13,6 +13,11 @@ export async function GET(req){
         const isAuthUser=await AuthUser(req)
         if(isAuthUser?.role==='admin'){
             const getAllOrders=await Order.find({}).populate('orderItems.product').populate('user')
+            console.log("ttt")
+            console.log(await Order.find({}).populate('orderItems.product'))
+            console.log("ttrrrt")
+            console.log(await Order.find({}).populate('orderItems.product').populate('user'))
+            console.log("ttt")
             if(getAllOrders){
                 return NextResponse.json({
                     success:true,
