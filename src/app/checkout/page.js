@@ -118,6 +118,9 @@ export default function Checkout(){
         }))
 
         const res=await callStripeSession(createLineItems)
+        console.log("res")
+        console.log(res)
+        console.log("rse")
         setIsOrderProcessing(true)
         localStorage.setItem('stripe',true)
         localStorage.setItem('checkoutFormData',JSON.stringify(checkoutFormData))
