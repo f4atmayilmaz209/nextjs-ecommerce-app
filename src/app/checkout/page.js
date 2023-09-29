@@ -116,7 +116,9 @@ export default function Checkout(){
             },
             quantity:1
         }))
-
+        console.log("crate")
+        console.log(createLineItems)
+        console.log("crate")
         const res=await callStripeSession(createLineItems)
         console.log("res")
         console.log(res)
