@@ -21,7 +21,7 @@ export async function GET(req){
             const yo=await Cart.find({userID:id})
             const r=yo
             console.log("wwwwwwww")
-            console.log(r[0]["productID"])
+            console.log(r[0]["productID"].valueOf())
             console.log("wwwwwwww")
             const extractAllCartItems=await Cart.find({userID:id}).populate('productID')
             //const extractAllCartItems=await Cart.find({}).populate('productID')
