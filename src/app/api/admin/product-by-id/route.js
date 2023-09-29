@@ -21,6 +21,9 @@ export async function GET(req){
         //     })
 
         // }
+        console.log("productId")
+        console.log(productId)
+        console.log("productId")
         const getData=await Product.find({_id:productId})
         if(getData && getData.length){
             return NextResponse.json({success:true,data:getData[0]})
