@@ -19,7 +19,7 @@ export async function GET(req){
             // if(!id) return NextResponse.json({success:false,message:'please login in!'})
             //const extractAllCartItems=await Cart.find({userID:id}).populate({path:"productID",model:"Products"})
             const yo=await Cart.find({userID:id})
-            const r=yo.productID
+            const r=yo["productID"]
             console.log("wwwwwwww")
             console.log(r)
             console.log("wwwwwwww")
