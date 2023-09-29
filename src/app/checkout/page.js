@@ -116,22 +116,14 @@ export default function Checkout(){
             },
             quantity:1
         }))
-        console.log("crate")
-        console.log(createLineItems)
-        console.log("crate")
         const res=await callStripeSession(createLineItems)
-        console.log("res")
-        console.log(res)
-        console.log("rse")
+
         setIsOrderProcessing(true)
         localStorage.setItem('stripe',true)
         localStorage.setItem('checkoutFormData',JSON.stringify(checkoutFormData))
         const {error}=await stripe.redirectToCheckout({
             sessionId:res?.id
         })
-        console.log("err")
-        console.log(error)
-        console.log("err")
 
     }
     useEffect(()=>{

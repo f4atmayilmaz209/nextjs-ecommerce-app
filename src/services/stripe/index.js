@@ -13,8 +13,6 @@ export const callStripeSession = async(formData)=>{
             body:JSON.stringify(formData)
         })
         const data=await res.json()
-        console.log(data)
-        console.log("99")
         return data;
     } catch (error) {
         console.log(error)

@@ -10,15 +10,9 @@ export const dynamic='force-dynamic';
 export async function POST(req){
     try {
        const isAuthUser=await AuthUser(req)
-       console.log("stripeee")
+
        if(isAuthUser){
             const res=await req.json()
-            console.log("stripeeesession")
-            console.log(res)
-            console.log("stripeeesession")
-            console.log("stripe")
-            console.log(stripe)
-            console.log("stripe")
             const session=await stripe.checkout.sessions.create({
                 payment_method_types:["card"],
                 line_items:res,
@@ -26,9 +20,7 @@ export async function POST(req){
                 success_url:'https://nextjs-ecommerce-jeofhlu8x-f4atmayilmaz209.vercel.app/checkout'+'?status=success',
                 cancel_url:'https://nextjs-ecommerce-jeofhlu8x-f4atmayilmaz209.vercel.app/checkout'+'?status=cancel'
             })
-            console.log("88")
-            console.log(session.id)
-            console.log("88")
+
             return NextResponse.json({
                 success:true,
                 id:session.id

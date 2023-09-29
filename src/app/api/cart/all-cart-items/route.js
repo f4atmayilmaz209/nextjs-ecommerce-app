@@ -10,13 +10,10 @@ export async function GET(req){
     try {
         await connectToDB();
         const isAuthUser=await AuthUser(req)
-        console.log("hello")
+
         if(isAuthUser){
             const {searchParams}=new URL(req.url);
             const id=searchParams.get('id')
-            console.log("id")
-            console.log(id)
-            console.log("id")
             // if(!id) return NextResponse.json({success:false,message:'please login in!'})
 
             const yo=await Cart.find({userID:id})
