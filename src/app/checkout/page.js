@@ -26,9 +26,7 @@ export default function Checkout(){
     const params=useSearchParams()
     const server = process.env.SERVER;
     const stripePromise=loadStripe(server)
-    console.log("process.env.customKey")
-    console.log(server)
-    console.log("process.env.customKeyyyyy")
+
 
     async function getAllAddress(){
         const res=await fetchAllAddress(user?._id)

@@ -8,9 +8,10 @@ export const dynamic='force-dynamic';
 export async function POST(req){
     try {
        const isAuthUser=await AuthUser(req)
+       console.log("stripeee")
        if(isAuthUser){
             const res=await req.json()
-    
+            console.log("stripeeesession")
             const session=await stripe.checkout.sessions.create({
                 payment_method_types:["card"],
                 line_items:res,
