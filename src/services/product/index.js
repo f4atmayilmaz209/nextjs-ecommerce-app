@@ -42,7 +42,7 @@ export const getAllAdminProducts=async()=>{
 }
 export const deletedProduct=async(id)=>{
     try {
-        const res=await fetch(`api/admin/delete-product?id=${id}`,{
+        const res=await fetch(`/api/admin/delete-product?id=${id}`,{
             method:'DELETE',
             headers:{
                 Authorization:`Bearer ${Cookies.get("token")}`
@@ -62,7 +62,7 @@ export const productByCategory=async(id)=>{
 
     try {
 
-        const res=await fetch(`api/admin/product-by-category?id=${id}`,{
+        const res=await fetch(`/api/admin/product-by-category?id=${id}`,{
             method:'GET',
             cache: "no-store",
         })
