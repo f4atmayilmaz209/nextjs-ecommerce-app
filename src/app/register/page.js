@@ -44,7 +44,7 @@ export default function Register() {
             setIsRegistered(true);
             setPageLevelLoader(false);
             setFormData(initialFormData);
-            router.push("/login")
+            router.push("https://nextjs-ecommerce-app-hazel.vercel.app//login")
           } else {
             toast.error(data.message, {
               position: toast.POSITION.TOP_RIGHT,
