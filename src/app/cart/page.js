@@ -20,6 +20,9 @@ export default function Cart(){
         console.log(user?._id)
         console.log("rtt")
         const res = await getAllCartItems(user?._id)
+        console.log("jjjjjjjjjj")
+        console.log(res.data)
+        console.log("jjjjjjjjjj")
         if (res.success) {
             const updatedData =
             res.data && res.data.length
