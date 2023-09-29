@@ -14,13 +14,13 @@ export async function DELETE(req){
         const {searchParams}=new URL(req.url);
         const id=searchParams.get('id');
 
-        if(!id){
-            return NextResponse.json({
-                success:false,
-                message:"Address ID is required"
-            })
+        // if(!id){
+        //     return NextResponse.json({
+        //         success:false,
+        //         message:"Address ID is required"
+        //     })
 
-        }
+        // }
         const isAuthUser=await AuthUser(req)
         if(isAuthUser){
             const deletedAddress=await Address.findByIdAndDelete(id)

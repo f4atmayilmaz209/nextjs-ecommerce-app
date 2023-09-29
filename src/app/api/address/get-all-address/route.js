@@ -11,13 +11,13 @@ export async function GET(req){
         await connectToDB();
         const {searchParams}=new URL(req.url)
         const id=searchParams.get('id')
-        if(!id){
-            return NextResponse.json({
-                success:false,
-                message:"you are not logged in"
-            })
+        // if(!id){
+        //     return NextResponse.json({
+        //         success:false,
+        //         message:"you are not logged in"
+        //     })
 
-        }
+        // }
         const isAuthUser=await AuthUser(req)
         if(isAuthUser){
             const getAllAddresses=await Address.find({userID:id})
