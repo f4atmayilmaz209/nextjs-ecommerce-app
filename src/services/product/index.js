@@ -62,14 +62,11 @@ export const productByCategory=async(id)=>{
 
     try {
 
-        const res=await fetch(`/api/admin/product-by-category?id=${id}`,{
+        const res=await fetch(`https://nextjs-ecommerce-nodug6xf5-f4atmayilmaz209.vercel.app/api/admin/product-by-category?id=${id}`,{
             method:'GET',
             cache: "no-store",
         })
         const data=await res.json();
-        console.log("red")
-        console.log(data)
-        console.log("red")
         return data;
         
     } catch (error) {
