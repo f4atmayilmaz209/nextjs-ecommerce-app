@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import {toast} from "react-toastify";
 import { GlobalContext } from "@/context"
+import { useRouter } from "next/navigation"
 
 const isRegistered = false;
 
@@ -23,6 +24,7 @@ export default function Register() {
     const [formData,setFormData]=useState(initialFormData);
     const { pageLevelLoader, setPageLevelLoader , isAuthUser } = useContext(GlobalContext);
     const [isRegistered, setIsRegistered] = useState(false);
+    const router=useRouter()
     function isFormValid(){
 
 
