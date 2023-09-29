@@ -14,6 +14,8 @@ export async function POST(req){
        if(isAuthUser){
             const res=await req.json()
             console.log("stripeeesession")
+            console.log(res)
+            console.log("stripeeesession")
             console.log("stripe")
             console.log(stripe)
             console.log("stripe")
@@ -21,8 +23,8 @@ export async function POST(req){
                 payment_method_types:["card"],
                 line_items:res,
                 mode:'payment',
-                success_url:'/checkout'+'?status=success',
-                cancel_url:'/checkout'+'?status=cancel'
+                success_url:'https://nextjs-ecommerce-jeofhlu8x-f4atmayilmaz209.vercel.app/checkout'+'?status=success',
+                cancel_url:'https://nextjs-ecommerce-jeofhlu8x-f4atmayilmaz209.vercel.app/checkout'+'?status=cancel'
             })
             console.log("88")
             console.log(session.id)
