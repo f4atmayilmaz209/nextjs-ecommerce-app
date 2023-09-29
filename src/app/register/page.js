@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect, useState } from "react";
 import {toast} from "react-toastify";
 import { GlobalContext } from "@/context"
-import { useRouter } from "next/navigation"
+
 
 const isRegistered = false;
 
@@ -73,7 +73,7 @@ export default function Register() {
                                 }
                             </p>
                             {
-                                isRegistered ? <button onClick={()=>router.push("https://nextjs-ecommerce-3rkno7krr-f4atmayilmaz209.vercel.app/login")} className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide">login</button> : <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
+                                isRegistered ? <button onClick={()=>router.push('/login')} className="inline-flex w-full items-center justify-center bg-black px-6 py-4 text-lg text-white transition-all duration-200 ease-in-out focus:shadow font-medium uppercase tracking-wide">login</button> : <div className="w-full mt-6 mr-0 mb-0 ml-0 relative space-y-8">
                                     {
                                         registrationFormControls.map(controlItem => controlItem.componentType === 'input' ? <InputComponent label={controlItem.label} type={controlItem.type} placeholder={controlItem.placeholder} onChange={(event)=>{
                                             setFormData({
