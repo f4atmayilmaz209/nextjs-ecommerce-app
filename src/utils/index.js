@@ -193,7 +193,7 @@ export const navOptions = [
   ];
   
   export const firebaseConfig = {
-    apiKey: process.env.apiKey,
+    apiKey: process.env.customKey,
     authDomain: process.env.authDomain,
     projectId: "next-js-ecommerce-2023-bf930",
     storageBucket: "next-js-ecommerce-2023-bf930.appspot.com",
