@@ -24,7 +24,7 @@ export const addToCart=async(formData)=>{
 //fixed
 export const getAllCartItems=async(id)=>{
     try {
-        const res=await fetch(`https://nextjs-ecommerce-nodug6xf5-f4atmayilmaz209.vercel.app/api/cart/all-cart-items?id=${id}`,{
+        const res=await fetch(`/api/cart/all-cart-items?id=${id}`,{
             method:'GET',
             cache:'no-store',
             headers:{
