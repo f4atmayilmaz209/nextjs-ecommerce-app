@@ -4,7 +4,7 @@ import InputComponent from "@/components/FormElements/InputComponents"
 import SelectComponent from "@/components/FormElements/SelectComponent"
 import TileComponent from "@/components/FormElements/TileComponent"
 import { GlobalContext } from "@/context"
-import { addNewProduct } from "@/services/product"
+import { addNewProduct,updateAProduct } from "@/services/product"
 import { AvailableSizes, adminAddProductformControls, firebaseConfig, firebaseStroageURL } from "@/utils"
 import { initializeApp } from "firebase/app"
 import { getDownloadURL, getStorage, ref, uploadBytesResumable } from "firebase/storage"
@@ -89,7 +89,7 @@ export default function AdminAddNewProduct() {
     }
     async function handleAddProduct(){
         setComponentLevelLoader({loading:true,id:''})
-        const res=currentUpdatedProduct !==null ? await currentUpdatedProduct(formData) : await addNewProduct(formData)
+        const res=currentUpdatedProduct !==null ? await updateAProduct(formData) : await addNewProduct(formData)
 
         if(res.success){
            setComponentLevelLoader({loading:false,id:''}) 
@@ -113,7 +113,7 @@ export default function AdminAddNewProduct() {
         <div className="w-full mt-5 mr-0 mb-0 ml-0 relative">
             <div className="flex flex-col items-start justify-start p-10 bg-white shadow-2xl rounded-xl relative">
                 <div className="w-full mt-6 mr-0 mb-0 ml-0 space-y-8">
-                    <input onChange={handleImage} accept="image/" max="1000000" type="file" />
+                    <input onChange={handleImage} accept="image/" max="1000000" type="file" /> 
 
                     <div className="flex gap-2 flex-col">
                         <label>Available sizes</label>

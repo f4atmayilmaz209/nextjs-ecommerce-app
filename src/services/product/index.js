@@ -90,3 +90,22 @@ export const productById=async(id)=>{
         
     }
 }
+export const updateAProduct = async (formData) => {
+    try {
+      const res = await fetch("/api/admin/update-product", {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+          Authorization: `Bearer ${Cookies.get("token")}`,
+        },
+        cache: "no-store",
+        body: JSON.stringify(formData),
+      });
+  
+      const data = await res.json();
+  
+      return data;
+    } catch (e) {
+      console.log(e);
+    }
+  };

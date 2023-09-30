@@ -36,12 +36,13 @@ export default function Navbar() {
     
     const pathName=usePathname()
     const router = useRouter()
+    
 
     useEffect(()=>{
         if(pathName!=='/admin-view/add-product' && currentUpdatedProduct !==null) setCurrentUpdatedProduct(null)
 
 
-    },[pathName,currentUpdatedProduct])
+    },[pathName])
     function handleLogout() {
         setIsAuthUser(false)
         setUser(null)
